@@ -1,0 +1,50 @@
+.hero-section{ padding: 0 5vw; margin-top: 80px; padding-top: 60px;}
+.hero-section h2{font-size: 100px; font-weight: 700; line-height: 90%;}
+.hero-section p{ width: 50%; margin: 40px auto;}
+
+.hero-quick-search{ grid-template-columns: repeat(7, 1fr); gap: 10px;}
+.quick-tile{background-color: var(--light-accent-bg); height: 100px; width: 150px; padding: 10px; position: relative; 
+    border-radius: 10px; overflow: hidden; margin: auto;}
+.quick-tile p{font-size: 15px; margin: 0; font-weight: 500; width: 90%;}
+.quick-tile img{position: absolute; width: 80%; right: -10%; top: 20%;}
+
+/*=============================================================================================================================*/
+
+.offer-section{ grid-template-columns: repeat(3, 1fr); padding: 0 5vw;}
+.offer-card{ background-color: var(--red); border-radius: 10px; padding: 20px; margin: 20px; height: 200px;}
+
+/*=============================================================================================================================*/
+
+.discover{padding: 0 5vw;}
+.trending-shops{ width: 100%; overflow-x: scroll; padding-bottom: 20px;}
+.trending-shops .place-list{display: flex; grid-template-columns: none; flex-wrap: nowrap; width: fit-content; margin-top: 0;}
+.trending-shops .place-list .food-place{width: 300px;}
+
+/*=============================================================================================================================*/
+
+.hero-discover{padding: 0 5vw 80px 5vw; background-image: linear-gradient(#fff, var(--light-accent-bg));}
+
+
+/*=============================================================================================================================*/
+
+
+@media screen and (max-width: 600px){
+
+    .hero-discover h1{font-size: 30px;}
+
+    .hero-section h2{font-size: 50px; line-height: 100%;}
+    .hero-section p{ width: 100%;}
+
+    .hero-quick-search{ grid-template-columns: repeat(3, 1fr);}
+    .quick-tile{height: 70px; width: 100px; padding: 5px; position: relative;}
+    .quick-tile p{font-size: 15px; margin: 0; font-weight: 500; width: 90%; position: absolute; z-index: 2;}
+    .quick-tile img{position: absolute; width: 80%; right: -10%; top: 20%; z-index: 0;}
+
+
+    
+    .trending-shops{ width: 100%; overflow-x: scroll; padding-bottom: 20px;}
+    .trending-shops .place-list{display: grid;  }
+    .trending-shops .place-list .food-place{width: 94vw;}
+
+
+}

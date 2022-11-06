@@ -1,0 +1,18 @@
+.profile-page{
+  margin-top: 80px;  display: grid; grid-template-columns: 360px 1fr; grid-gap: 40px;
+  height: calc(100vh - 80px); width: 100vw; border: 1px solid var(--shadow);
+}
+.profile{border-right: 1px solid var(--shadow);}
+.profile-image{height: 200px; width: 200px; margin: 50px auto 20px; background-color: var(--accent1);}
+.change-image-btn{display: none;}
+.profile-image:hover .change-image-btn{display: inline-flex;}
+
+.profile-content{ padding-right: 5vw;}
+
+/*=============================================================================================================================*/
+
+@media screen and (max-width: 600px) {
+  .profile-page{grid-template-columns: 1fr; padding: 0 5vw; height: auto;}
+  .profile{border-style: none;}
+  .profile-content{ padding: 30px 0;}
+}

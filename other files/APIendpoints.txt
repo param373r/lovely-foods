@@ -1,0 +1,12 @@
+Auth: 
+  Login
+  Register
+  Logout
+  UpdateProfile
+  UpdateAvatar
+  DeleteAccount
+
+Food: 
+  Get food by id
+  Get restro by id
+  
