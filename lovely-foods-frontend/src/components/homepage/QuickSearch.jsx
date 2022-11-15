@@ -10,9 +10,11 @@ const QuickTile = (props) => {
 const QuickSearch = (props) => {
   return (<div className="hero-quick-search d-grid align-center mt-4 justify-evenly">
     <QuickTile name="Healthy" image="/assets/rounded.png" />
-    <QuickTile name="Healthy" image="/assets/rounded.png" />
-    <QuickTile name="Healthy" image="/assets/rounded.png" />
-    <QuickTile name="Healthy" image="/assets/rounded.png" />
+    <QuickTile name="North Indian" image="/assets/rounded.png" />
+    <QuickTile name="South Indian" image="/assets/rounded.png" />
+    <QuickTile name="Chinese" image="/assets/rounded.png" />
+    <QuickTile name="Beverages" image="/assets/rounded.png" />
+    <QuickTile name="Snacks" image="/assets/rounded.png" />
   </div>);
 }
 

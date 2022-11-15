@@ -1,0 +1,733 @@
+{
+	"info": {
+		"_postman_id": "7316051c-db60-42ec-bcfb-a2c691b5f282",
+		"name": "Lovely Foods",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23387424"
+	},
+	"item": [
+		{
+			"name": "Developer Options",
+			"item": [
+				{
+					"name": "Register new shop",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 201){\r",
+									"    pm.environment.set('shopId',pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"placeholder\",\r\n    \"description\": \"placeholder\",\r\n    \"shopCategories\": [\r\n        \"placeholder\"\r\n    ],\r\n    \"location\": \"placeholder\",\r\n    \"contact\": \"placeholder\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/shop/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shop",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register food",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"placeholder\",\r\n    \"description\": \"placeholder\",\r\n    \"foodCategories\": [\r\n        \"placeholder\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/food/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"food",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public",
+			"item": [
+				{
+					"name": "Shop based",
+					"item": [
+						{
+							"name": "Read shops",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/shop/readShops",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shop",
+										"readShops"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View shop",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"_id\": \"63669de68fc0250b78c98fd5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/shop/shopDetails",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shop",
+										"shopDetails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add shop avatar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/C:/Users/thepr/OneDrive/Pictures/Saved Pictures/pp.jpg"
+										},
+										{
+											"key": "_id",
+											"value": "63679009532348c8aa37f89a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/shop/uploadAvatar",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shop",
+										"uploadAvatar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get shop avatar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/{{shopId}}/avatar",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"{{shopId}}",
+										"avatar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Food based",
+					"item": [
+						{
+							"name": "Read foods",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/food/readFoods",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"food",
+										"readFoods"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View food",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"_id\": \"6366c37be6a3e6c895fefd5f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/food/foodDetails",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"food",
+										"foodDetails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add food avatar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/C:/Users/thepr/OneDrive/Pictures/Saved Pictures/pp.jpg"
+										},
+										{
+											"key": "_id",
+											"value": "6366c3c5e6a3e6c895fefd62",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/food/uploadAvatar",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"food",
+										"uploadAvatar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get food avatar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/foods/{{foodId}}/avatar",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"foods",
+										"{{foodId}}",
+										"avatar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User based",
+			"item": [
+				{
+					"name": "Register user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 201){\r",
+									"    pm.environment.set('authToken',pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Paramjot Singh\",\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"test1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/readProfile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"readProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": 8800343701\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/updateUser",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/deleteUser",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 200){\r",
+									"    pm.environment.set('authToken',pm.response.json().token)\r",
+									"    pm.environment.set('userId',pm.response.json().user._id)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"test1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout from all devices",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/logoutAll",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"logoutAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavShop Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"placeholder\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/favShop/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favShop",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload avatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/thepr/OneDrive/Pictures/Saved Pictures/param373r.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/uploadAvatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"uploadAvatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete avatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/deleteAvatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"deleteAvatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavFood Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shop\": {\r\n        \"_id\": \"63669de68fc0250b78c98fd5\",\r\n        \"food\": \"6366c37be6a3e6c895fefd5f\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/favFood/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favFood",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavFoods View",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favFood/readFoods",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favFood",
+								"readFoods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavFood Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"_id\": \"636752bef2b4be761835c83f\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/favFood/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favFood",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavShops View",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favShop/readShops",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favShop",
+								"readShops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavShop Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"63679009532348c8aa37f89a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/favShop/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favShop",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Ids",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/getUserIds",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"getUserIds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user avatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/{{userId}}/avatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"{{userId}}",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{authToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

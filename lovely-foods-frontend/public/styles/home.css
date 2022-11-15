@@ -2,7 +2,7 @@
 .hero-section h2{font-size: 100px; font-weight: 700; line-height: 90%;}
 .hero-section p{ width: 50%; margin: 40px auto;}
 
-.hero-quick-search{ grid-template-columns: repeat(7, 1fr); gap: 10px;}
+.hero-quick-search{ grid-template-columns: repeat(6, 1fr); gap: 10px;}
 .quick-tile{background-color: var(--light-accent-bg); height: 100px; width: 150px; padding: 10px; position: relative; 
     border-radius: 10px; overflow: hidden; margin: auto;}
 .quick-tile p{font-size: 15px; margin: 0; font-weight: 500; width: 90%;}

@@ -8,6 +8,12 @@ nav li a:hover{ color: var(--txt1); font-weight: 500; }
 
 /*==========================================================================================================================*/
 
+.model-overlay{ position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 999; background-color: #0004;
+    display: flex; justify-content: center; align-items: center;}
+.model{width: 94vw; max-width: 600px; background-color: white; padding: 20px; border-radius: 20px; }
+
+/*==========================================================================================================================*/
+
 .hero-search-form{ border: none; max-width: 50%; margin: auto; outline: 2px solid var(--accent1); overflow: hidden;
   grid-template-columns: 40px 1fr 80px; background-color: white;}
 .hero-search-form.focused{ outline-width: 5px;}

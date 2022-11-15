@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 
@@ -20,9 +21,12 @@ const FoodPlace = (props) => {
 
 
 const PlaceList = (props) => {
+  console.log(props.list);
   return (
   <div className="place-list">
-    { props.list.map((place, index) => <FoodPlace key={`p-${place._id}-${index}`} place={place} />) }
+    { 
+      props.list.map((place, index) => <FoodPlace key={`p-${place._id}-${index}`} place={place} />) 
+    }
   </div>);
 }
 
