@@ -25,3 +25,5 @@ To host the front-end...
 
 ## Contribution
 We are going to be open for contribution too, as soon as the hackathon concludes... Feel free to submit your pull requests, will review and update them when the results are declared.
+
+> Project made in contribution with [@prashantkumardagur](https://github.com/prashantkumardagur)
