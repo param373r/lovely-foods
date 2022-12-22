@@ -5,7 +5,7 @@ import FoodList from "../dashboard/FoodList";
 import Filters from "../dashboard/Filters";
 import PageLoader from "../ui/Loadings/PageLoader";
 
-import { getShopsAPI } from "../../api/dashboard";
+import { getShopsAPI, getFoodsAPI } from "../../api/dashboard";
 
 import shopFilters from "../../utils/shopFilters";
 
@@ -29,10 +29,12 @@ const foodList = [{
 const Discover = (props) => {
 
   const [shops, setShops] = useState([]);
+  const [foods, setFoods] = useState([]);
 
-  const [appliedShopFilters, setAppliedShopFilters] = useState(["healthy", "north indian"]);
+  const [appliedShopFilters, setAppliedShopFilters] = useState([]);
 
   const [shopsAreLoading, setShopsAreLoading] = useState(true);
+  const [foodsAreLoading, setFoodsAreLoading] = useState(true);
 
 
   useEffect(() => {
@@ -43,7 +45,15 @@ const Discover = (props) => {
       setShopsAreLoading(false);
     }
 
+    const getFoods = async () => {
+      const res = await getFoodsAPI();
+      if(res === "Error") return;
+      setFoods(res);
+      setFoodsAreLoading(false);
+    }
+
     getShops();
+    getFoods();
   }, [])
 
 
@@ -59,7 +69,10 @@ const Discover = (props) => {
     <h3 className="mt-7 mb-3 h2">Discover your favorite food</h3>
     <div className="discover-foods">
       <Filters />
-      <FoodList list={foodList} type="Food" />
+      { foodsAreLoading ?
+      <PageLoader /> : 
+      <PlaceList list={foods} />
+      }
     </div>
     <h3 className="mt-7 mb-3 h2">Discover shops</h3>
     <div className="discover-shops mb-8">

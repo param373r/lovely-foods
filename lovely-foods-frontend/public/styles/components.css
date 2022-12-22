@@ -14,13 +14,15 @@ nav li a:hover{ color: var(--txt1); font-weight: 500; }
 
 /*==========================================================================================================================*/
 
-.hero-search-form{ border: none; max-width: 50%; margin: auto; outline: 2px solid var(--accent1); overflow: hidden;
+.hero-search-form{ border: none; max-width: 50%; margin: auto; outline: 2px solid var(--accent1);
   grid-template-columns: 40px 1fr 80px; background-color: white;}
 .hero-search-form.focused{ outline-width: 5px;}
 .hero-search{border: none; padding: 10px 0; outline: none; font-size: 16px;}
 .hero-search-icon{ width: 100%; text-align: center;}
 .hero-search-form button{ background-color: var(--accent1); height: 100%; border: none; padding-right: 10px; font-size: 18px; color: white}
 
+.search-results{ top: 45.5px; height: 420px; background-color: white; width: calc(100% + 3px); z-index: 5; border: 2px solid var(--accent1);
+  border-top: none; left: -1px; }
 /*==========================================================================================================================*/
 
 .btn{ border: none; padding: 8px 15px; font-size: 16px; border-radius: 20px; display: inline-flex; align-items: center;}

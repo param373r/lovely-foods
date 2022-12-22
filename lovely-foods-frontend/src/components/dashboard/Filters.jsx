@@ -67,7 +67,7 @@ const Filters = (props) => {
   
 
   return (
-  <div className="filters d-flex align-center mb-4">
+  <div className="filters d-none align-center mb-4">
     {  appliedFilters?.map((filter, index) => <FilterType name={filter} key={`${type}-filter-${index}`} onClose={() => {closeHandler(filter)}} />) }
     <button className="filter-btn" onClick={()=>{setShowModel(true);}} ><Icon name="add" /> Add filter </button>
     <Model show={showModel} element={

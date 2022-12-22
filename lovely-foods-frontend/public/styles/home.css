@@ -1,6 +1,6 @@
 .hero-section{ padding: 0 5vw; margin-top: 80px; padding-top: 60px;}
 .hero-section h2{font-size: 100px; font-weight: 700; line-height: 90%;}
-.hero-section p{ width: 50%; margin: 40px auto;}
+.hero-section > p{ width: 50%; margin: 40px auto;}
 
 .hero-quick-search{ grid-template-columns: repeat(6, 1fr); gap: 10px;}
 .quick-tile{background-color: var(--light-accent-bg); height: 100px; width: 150px; padding: 10px; position: relative; 
